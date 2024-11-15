@@ -1,20 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>りゅうこの音楽</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>りゅうこのいんすと</h1>
-
-    <h3>2023</h3>
-    <ul>
-        <!--
-            <a href="2023_memoris/instrumental.wav" download=""><li>恋して昇天ナンマイダ</li></a>
-        -->
-        <a href="2023_futureSymphonia/instrumental.wav" download="2023_futureSymphonia"><li>ミライ☆シンフォニア</li></a>
+  <div class="track-information">
+    <button class="info-close-btn">❌</button>
+    <button class="info-toggle-btn">曲情報</button>
+    <ul class="track-info-list">
+      <li class="info-item">
+      <!-- 追加されるリストアイテムはここに挿入 -->
     </ul>
+  </div>
 
-    <h3>2022</h3>
-    <ul>
-        <a href="2022_dreamStar/instrumental.wav" download="2022_dreamStar"><li>Dream☆Star</li></a>
-    </ul>
+  <div class="player">
+    <button onclick="compressPlayer()" id="compress-bar"></button> <!-- ボタンにテキストを追加 -->
+
+    <div class="album-art">
+      <img onclick="expandPlayer()" src="images/default.jpg" alt="アルバムアート">
+    </div>
+  
+    <div class="track-info">
+      <div class="track-title" id="trackTitle" onclick="expandPlayer()">ここに曲名が入りますここに曲名が入りますここに曲名が入ります</div>
+      <div class="artist-name">アーティスト名</div>
+      <div class="track-date">2024.13.23</div>
+    </div>
+  
+    <div class="progress-container">
+      <span class="current-time">0:00</span>
+      <input type="range" class="progress-bar" min="0" max="100" value="50">
+      <span class="duration">-0:14</span>
+    </div>
+  
+    <div class="controls">
+      <button class="back-btn">⏪</button>
+      <button class="play-btn">▶️</button>
+      <button class="skip-btn">⏩</button>
+    </div>
+  
+    <div class="volume-container">
+      <span class="volume-icon">🔈</span>
+      <input type="range" class="volume-bar" min="0" max="100" value="30">
+      <span class="volume-icon">🔊</span>
+    </div>
+
+    <div class="information-container">
+      <button class="credit-btn">i</button>
+      <button class="download-btn">⬇️</button>
+      <button class="repeat-btn">🔄</button>
+    </div>
+  </div>
+
+  <div id="album-list">  
+    <div class="album" album-name="第9回キネティックノベル大賞">
+      <div class="album-header">
+        <div>
+          <img src="images/default.jpg" />
+          <span>第9回キネティックノベル大賞</span>
+        </div>
+        <button class="toggle-btn">+</button>
+      </div>
+      <ul class="track-list">
+        <li album-art="" artist-name="アニメ音楽工房" track-title="ボーカルテーマ1 0621" track-date="2023.06.21" composer-name="松本龍太郎" lyricist-name="" singer-name="" trackURL="https://github.com/ryutarodayo1234/musics/raw/refs/heads/main/2023_KineticNovelGrandPrix_Vocal1/demo/2023_0621.mp3">ボーカルテーマ1 0621</li>
+        <li album-art="" artist-name="アニメ音楽工房" track-title="ボーカルテーマ1 0624" track-date="2023.06.24" composer-name="松本龍太郎" lyricist-name="" singer-name="" trackURL="https://github.com/ryutarodayo1234/musics/raw/refs/heads/main/2023_KineticNovelGrandPrix_Vocal1/demo/2023_0624.mp3">ボーカルテーマ1 0624</li>
+        <li album-art="" artist-name="アニメ音楽工房" track-title="ボーカルテーマ1 0625" track-date="2023.06.25" composer-name="松本龍太郎" lyricist-name="" singer-name="" trackURL="https://github.com/ryutarodayo1234/musics/raw/refs/heads/main/2023_KineticNovelGrandPrix_Vocal1/demo/2023_0625.mp3">ボーカルテーマ1 0625</li>
+      </ul>
+    </div>
+  
+    <div class="album" album-name="Album Name 2">
+      <div class="album-header">
+        <div>
+          <img src="images/default.jpg" />
+          <span>Album Name 2</span>
+        </div>
+        <button class="toggle-btn">+</button>
+      </div>
+      <ul class="track-list">
+        <li album-art="" artist-name="アニメ音楽工房" track-title="M01" track-date="2024.11.01" composer-name="松本龍太郎" lyricist-name="" singer-name="" trackURL=""></li>
+        <li album-art="" artist-name="アニメ音楽工房" track-title="M02" track-date="2024.11.01" composer-name="松本龍太郎" lyricist-name="" singer-name="" trackURL=""></li>
+        <li album-art="" artist-name="アニメ音楽工房" track-title="M03" track-date="2024.11.01" composer-name="松本龍太郎" lyricist-name="" singer-name="" trackURL=""></li>
+      </ul>
+    </div>
+  </div>  
+
+  <script src="app.js"></script>
 </body>
+</html>
