@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let threshold = 100; // しきい値 (ピクセル単位)
 
   // album-listをクリックした時にcompressPlayerを呼び出す
-  albumList.addEventListener("click", () => {
-    compressPlayer();
-  });
+  //albumList.addEventListener("click", () => {
+  //  compressPlayer();
+  //});
 
   player.addEventListener("touchstart", (e) => {
     touchStartY = e.touches[0].clientY;
@@ -197,11 +197,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector(".repeat-btn").addEventListener("click", function() {
     if (this.classList.contains("active")) {
-      this.classList.remove("active");
-      this.textContent = "🔄"; // 次へアイコンに変更
-    } else {
       this.classList.add("active");
-      this.textContent = "🔂"; // 繰り返しアイコンに変更
+      this.textContent = "🔂"; // 次へアイコンに変更
+    } else {
+      this.classList.remove("active");
+      this.textContent = "🔄"; // 繰り返しアイコンに変更
     }
   });
   

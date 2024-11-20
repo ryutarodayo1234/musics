@@ -231,7 +231,7 @@ body {
 .information-container {
   display: flex;
   justify-content: space-around;
-  margin: 15px 0;
+  margin: 15px 0 0 0;
 }
 
 .download-btn, .credit-btn {
@@ -255,7 +255,6 @@ body {
   cursor: pointer;
   color: #666; /* 通常時の色 */
   transition: color 0.3s ease;
-  padding: 0.5rem;
   border-radius: 50%; /* 丸いボタンに */
 }
 
@@ -270,6 +269,12 @@ body {
 
 .player {
   transition: 0.1s ease;
+}
+
+.player .album-art{
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* 圧縮表示用スタイル */
