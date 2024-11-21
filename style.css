@@ -249,13 +249,13 @@ body {
 }
 
 .repeat-btn {
+  background-color: #333333; /* ボタンの背景色 */
   font-size: 1.2rem;
-  background-color: transparent; /* 背景を透明に */
   border: none;
   cursor: pointer;
   color: #666; /* 通常時の色 */
   transition: color 0.3s ease;
-  border-radius: 50%; /* 丸いボタンに */
+  border-radius: 5px; /* 丸いボタンに */
 }
 
 .repeat-btn:hover {
